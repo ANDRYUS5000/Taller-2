@@ -1,0 +1,11 @@
+<div class=" container d-flex">
+  <div class="card m-4" style="width: 18rem;" *ngFor="let prod of prods">
+    <img [src]="imgs[prods.indexOf(prod)]" class="card-img-top" [routerLink]="['/productos/',prod.id]">
+    <div class="card-body container">
+      <h4>Desde ${{ObtainValue()}}000</h4>
+      <h5 class="card-title">{{prod.nombre}}</h5>
+      <p class="card-text">{{prod.detalle}}</p>
+      <a [routerLink]="['/productos/',prod.id]" class="btn btn-danger">Añadir al Carrito</a>
+    </div>
+  </div>
+</div>
